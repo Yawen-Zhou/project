@@ -43,13 +43,14 @@
 - Employ 95%CI and p-values
 - Write a brief abstract-style conclusion
 - Code for reference:
-   - 1. 
+   -  1.
       ```stata
       merge 1:1 seqn using demo_mortality, nogen
       sts graph, by(huq010) fail
       stcox i.huq010
       ```
-   - 2. 
+      
+   -  2.
       ```stata
       import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.XPT", clear 
       huq010 
