@@ -17,7 +17,7 @@
      ```
 ## 2. Code Development:
 - ### Edit and Rename Provided Script:
-   - Download, modify, and upload the provided Stata .do file for linking the DEMO.XPT data to mortality follow-up data. Rename this file to ```followup.do``` and commit it with the description: “Updated DEMO.XPT linkage .do file”. In otherwords, download, modify, and upload Stata_ReadInProgramAllSurveys.do. You may watch the week 6 video for the key items to edit. For instance, you may edit it so that it reads in the data directly from the website.
+   - Download, modify, and upload the [Stata_ReadInProgramAllSurveys.do](https://ftp.cdc.gov/pub/HEALTH_STATISTICS/NCHS/datalinkage/linked_mortality/Stata_ReadInProgramAllSurveys.do) file for linking the DEMO.XPT data to mortality follow-up data. Rename this file to ```followup.do``` and commit it with the description: “Updated DEMO.XPT linkage .do file”. Remember to edit the hardcoded filepath.
 - ### Data Merging:
    - Merge the survey data with the mortality data, ensuring alignment on the unique sequence numbers:
       ```stata
@@ -29,3 +29,36 @@
       merge 1:1 seqn using followup
       lookfor follow
       ```
+## 3. Key Parameters for Week 7s Analysis:
+- ### Self-Reported Health Assessment:
+   - Import the specific health questionnaire data and prepare it for analysis in Week 7:
+      ```stata
+      import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.XPT", clear
+      ```
+## 4. Inferences
+- Please review [documentation](https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.htm) for the file ```HUQ.XPT```, which includes the variable ```huq010```
+- Employ 95%CI and p-values
+- Write a brief abstract-style conclusion
+- Code for reference:
+   - 1. 
+      ```stata
+      merge 1:1 seqn using demo_mortality, nogen
+      sts graph, by(huq010) fail
+      stcox i.huq010
+      ```
+   - 2. 
+      ```stata
+      import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.XPT", clear 
+      huq010 
+      desc huq010
+      codebook huq010
+      ```
+  
+
+
+
+
+
+
+
+
