@@ -15,6 +15,7 @@
      //code
      cat https://ftp.cdc.gov/pub/HEALTH_STATISTICS/NCHS/datalinkage/linked_mortality/Stata_ReadInProgramAllSurveys.do
      ```
+     
 ## 2. Code Development:
 - ### Edit and Rename Provided Script:
    - Download, modify, and upload the [Stata_ReadInProgramAllSurveys.do](https://ftp.cdc.gov/pub/HEALTH_STATISTICS/NCHS/datalinkage/linked_mortality/Stata_ReadInProgramAllSurveys.do) file for linking the DEMO.XPT data to mortality follow-up data. Rename this file to ```followup.do``` and commit it with the description: “Updated DEMO.XPT linkage .do file”. Remember to edit the hardcoded filepath.
@@ -29,12 +30,14 @@
       merge 1:1 seqn using followup
       lookfor follow
       ```
+      
 ## 3. Key Parameters for Week 7s Analysis:
 - ### Self-Reported Health Assessment:
    - Import the specific health questionnaire data and prepare it for analysis in Week 7:
       ```stata
       import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.XPT", clear
       ```
+      
 ## 4. Inferences
 - Please review [documentation](https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.htm) for the file ```HUQ.XPT```, which includes the variable ```huq010```
 - Employ 95%CI and p-values
