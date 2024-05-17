@@ -56,4 +56,6 @@
       desc huq010
       codebook huq010
       ```
-  
+
+## 5. Results of survival analysis_week 7
+- Please click [here](dyndoc.html) to see the results
