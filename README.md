@@ -57,7 +57,7 @@
       codebook huq010
       ```
 ## 5. Results of survival analysis_week 7
-- Please click [here](https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.htm) to see the results
+- Please click [here](dyndoc.html) to see the results
 
 
 
