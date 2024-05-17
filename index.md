@@ -58,4 +58,4 @@
       ```
 
 ## 5. Results of survival analysis_week 7
-- Please click  to see the results
+- Please click [here](dyndoc.html) to see the results
